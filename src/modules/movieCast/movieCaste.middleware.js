@@ -1,6 +1,7 @@
-export const validateCreateActor=(req,res,next)=>{
-    const {name,}=req.body
-    if(name){
+export const validateCreateMovieCast=(req,res,next)=>{
+    const {movieId,actorId,castName}=req.body
+    
+    if(movieId&&actorId&&castName){
         next()
     }
     else{

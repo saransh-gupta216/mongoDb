@@ -1,6 +1,7 @@
 export const validateCreateMovie=(req,res,next)=>{
-    const {name, publishDate, rating}=req.body
-    if(name&&publishDate&&rating){
+    const {name, publishDate, rating, no_of_tickets}=req.body
+    
+    if(name&&publishDate&&rating&&no_of_tickets){
         next()
     }
     else{
