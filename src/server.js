@@ -4,9 +4,11 @@ import { actorRoute } from "./modules/actors/actor.route.js";
 import express from "express"
 import { movieCasteRouter } from "./modules/movieCast/movieCast.route.js";
 import { ticketRouter } from "./modules/tickets/ticket.route.js";
-
+import cors from "cors"
 const app = express()
 app.use(express.json())
+app.use(cors())
+
 app.use("/movies",movieRouter)
 app.use("/actors",actorRoute)
 app.use("/moviecaste",movieCasteRouter)
